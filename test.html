@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    // 1.
+    let str = "hello.vue";
+    console.log(str.startsWith("hello")); // true
+    console.log(str.endsWith(".vue")); // true;
+    // ...
+
+    // 2.
+    let ss = `<div>
+                <span>hello world></span>
+              </div>`;
+    console.log(ss);
+
+    // 3.
+    function fun() {
+        return "这是一个函数";
+    }
+
+    let abc = 10;
+    let info = `我是${abc}, 今年${abc + 10}了, 我想说：${fun()}`;
+    console.log(info);
+
+    // 在ES6之前，我们无法给一个函数参数设置默认值，只能采用变通写法
+    function f(a, b) {
+        // 判断b是否为空，为空就赋予默认值1
+        b = b || 1;
+        return a + b;
+    }
+
+    // 不给b传参
+    console.log(f(10));
+
+    // 在ES6之后：直接给参数写上默认值，没传就会自动使用默认值
+    function f1(a, b = 1) {
+        return a + b;
+    }
+
+    // 不给b传参，b的默认值为1
+    console.log(f(10));
+
+    // 不定参数
+    function f2(...values) {
+        console.log(values.length);
+    }
+
+    f2(1, 2) // 2
+    f2(1, 2, 3, 4) // 4
+
+</script>
+</html>
