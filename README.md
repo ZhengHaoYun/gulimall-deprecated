@@ -532,6 +532,11 @@ npm uninstall node-sass
 另一个人的评论：
 
 先把node_modules全部删除，然后再npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver，最后npm install
+
+如何下载cnpm？
+npm install -g cnpm --registry=https://registry.npm.taobao.org 
+如何下载node-sass
+cnpm install node-sass --save
 ```
 
 （4）启动renren-fast服务，测试是否成功
@@ -824,7 +829,7 @@ server:
 
 这里的作用是是依赖管理，相当于以后在dependencies里引入spring cloud alibaba的组件就不用写版本号了， 全用dependencyManagement进行管理。
 
-### 1、Nacos	服务发现与配置管理
+### 1、Nacos服务发现与配置管理
 
 Nacos：一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
@@ -1067,7 +1072,7 @@ SpringCloud Feign在Hoxton.M2 RELEASED版本之后不再使用Ribbon而是使用
 </parent>
 ```
 
-得到如下结果：
+访问http://localhost:8000/member/member/coupons得到如下结果代表成功：
 
 ```
 {"msg":"success","code":0,"coupons":[{"id":null,"couponType":null,"couponImg":null,"couponName":"满100-10","num":null,"amount":null,"perLimit":null,"minPoint":null,"startTime":null,"endTime":null,"useType":null,"note":null,"publishCount":null,"useCount":null,"receiveCount":null,"enableStartTime":null,"enableEndTime":null,"code":null,"memberLevel":null,"publish":null}],"member":{"id":null,"levelId":null,"username":null,"password":null,"nickname":"会员昵称张三","mobile":null,"email":null,"header":null,"gender":null,"birth":null,"city":null,"job":null,"sign":null,"sourceType":null,"integration":null,"growth":null,"status":null,"createTime":null}}
